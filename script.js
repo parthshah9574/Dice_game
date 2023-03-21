@@ -43,21 +43,24 @@ const switchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
-//Roll the dice
+// Rolling dice functionality
 btnRoll.addEventListener('click', function () {
   if (playing) {
-    //1. show dice and random number
+    // 1. Generating a random dice roll
+    const dice = Math.trunc(Math.random() * 6) + 1;
+
+    // 2. Display dice
     diceEl.classList.remove('hidden');
-    const randomDice = Math.trunc(Math.random() * 6) + 1;
-    diceEl.src = `dice-${randomDice}.png`;
-    //2. check for 1, when dice roll
-    if (randomDice !== 1) {
-      curScore = curScore + randomDice;
+    diceEl.src = `dice-${dice}.png`;
+
+    // 3. Check for rolled 1
+    if (dice !== 1) {
+      // Add dice to current score
+      currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent =
-        curScore;
-      //change later
+        currentScore;
     } else {
-      //switch player
+      // Switch to next player
       switchPlayer();
     }
   }
