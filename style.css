@@ -169,3 +169,25 @@ main {
 .hidden {
   display: none;
 }
+
+/* Responsive  */
+/* 
+@media only screen and (max-width: 768px) {
+  body {
+    position: relative;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .dice {
+    position: absolute;
+    bottom: 0;
+  }
+
+  main {
+    overflow: visible;
+    
+} */

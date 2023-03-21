@@ -1,5 +1,9 @@
 'use strict';
 
+if (window.innerHeight > window.innerWidth) {
+  alert('Please rotate your screen');
+}
+
 // Selecting elements
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
